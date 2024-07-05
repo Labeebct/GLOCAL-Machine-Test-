@@ -1,11 +1,26 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Logo from "../assets/Images/Logo.png";
 import MenuIcon from "@mui/icons-material/Menu";
-import CloseIcon from "@mui/icons-material/Close";
 import SideBar from "./SideBar";
 
 const Header = () => {
   const [navOpen, setNavOpen] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 1280) {
+        setNavOpen(false);
+      }
+    };
+
+    handleResize(); 
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
 
   return (
     <nav className="flex justify-between px-2 sm:px-4 md:px-6 lg:px-8 xl:px-10 items-center w-full h-24 bg-white">
