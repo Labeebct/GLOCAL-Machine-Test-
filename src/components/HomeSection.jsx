@@ -144,7 +144,7 @@
 
     return (
       <div
-        onClick={handleScroll}
+      onClick={handleScroll}
         className="flex justify-center  items-center w-full h-[calc(100vh-96px)]"
         style={{
           backgroundImage: `url(${bgVector})`,
