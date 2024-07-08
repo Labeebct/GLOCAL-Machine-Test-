@@ -11,7 +11,7 @@ import CloseIcon from "@mui/icons-material/Close";
 const SideBar = ({ isNavOpen, setNavOpen }) => {
   return (
     <div
-      className={`w-[250px] border-r shadow-sm flex flex-col bg-[#f3f3f3] h-full  ${
+      className={`w-[250px] z-50 border-r shadow-sm flex flex-col bg-[#f3f3f3] h-full  ${
         isNavOpen ? "left-0" : "left-[-300px]"
       } duration-300 ease-in-out fixed top-0 bottom-0`}
     >
